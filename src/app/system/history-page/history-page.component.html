@@ -1,4 +1,4 @@
-  <div class="title-block">
+<div class="title-block">
     <h3 class="title pull-left">
       Страница истории <span class="sparkline bar"></span>
     </h3>
@@ -7,7 +7,9 @@
         <i class="fa fa-filter"></i>
       </button>
     </div>
-  </div>
+</div>
+<div *ngIf="!isLoaded" class="text-center"><wfm-loader></wfm-loader></div>
+  <div *ngIf="isLoaded">
   <wfm-history-chart [data]="chartData"></wfm-history-chart>
   <wfm-history-events
     [categories]="categories"
@@ -20,7 +22,4 @@
       [categories]="categories"
     ></wfm-history-filter>
   </div>
-
-
-
-
+</div>
