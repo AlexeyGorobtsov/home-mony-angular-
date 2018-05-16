@@ -20,7 +20,7 @@ export class RegistrationComponent implements OnInit {
                 private router: Router,
                 private title: Title
                 ) {
-    title.setTitle('Регистрация')
+    title.setTitle('Регистрация');
   }
 
   ngOnInit() {
